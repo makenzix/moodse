@@ -1,0 +1,18 @@
+function Bn(){
+	system("clear");
+	$zone = TimeZone();
+	$tanggal = Date("d-M-Y");
+	$waktu = Date("H:i:s");
+	$panjang = 50-strlen($zone.$tanggal.$waktu);
+	$spasi = floor($panjang/2);
+	$lokasi = c.$zone.str_repeat(" ",$spasi).$tanggal.str_repeat(" ",$spasi).$waktu;
+	if($panjang % 2 == 1){
+		$lokasi .= " ";
+	}
+	print $lokasi.n;
+	print Line();
+	Acssi_calvin(title);
+	print mp.str_pad("FREE SCRIPT! NOT FOR SALE",50," ",STR_PAD_BOTH).d."\n";
+	print pm.str_pad("© Copyright IEWIL OFFICIAL 2023",50," ",STR_PAD_BOTH)." ".d."\n";
+	print Line();
+}

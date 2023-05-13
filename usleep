@@ -1,0 +1,6 @@
+function Slow($msg){
+	$slow = str_split($msg);
+	foreach( $slow as $slowmo ){
+		print $slowmo; usleep(70000);
+	}
+}

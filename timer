@@ -1,0 +1,45 @@
+function auth($wr){
+	$nic[] = $wr." i".p."ewil-official";
+	$nic[] = $wr." ie".p."wil-official";
+	$nic[] = $wr." iew".p."il-official";
+	$nic[] = " i".$wr."ewi".p."l-official";
+	$nic[] = " ie".$wr."wil".p."-official";
+	$nic[] = " iew".$wr."il-".p."official";
+	$nic[] = " iewi".$wr."l-o".p."fficial";
+	$nic[] = " iewil".$wr."-of".p."ficial";
+	$nic[] = " iewil".$wr."-of".p."ficial";
+	$nic[] = " iewil-".$wr."off".p."icial";
+	$nic[] = " iewil-o".$wr."ffi".p."cial";
+	$nic[] = " iewil-of".$wr."fic".p."ial";
+	$nic[] = " iewil-of".$wr."fic".p."ial";
+	$nic[] = " iewil-off".$wr."ici".p."al";
+	$nic[] = " iewil-offi".$wr."cia".p."l";
+	$nic[] = p." iewil-offic".$wr."ial";
+	$nic[] = p." iewil-offici".$wr."al";
+	$nic[] = p." iewil-officia".$wr."l";
+	return $nic;
+}
+function Tmr($tmr){
+	date_default_timezone_set("UTC");
+	$col = [b,c,d,h,k,m,u];
+	//$sym = [' ─ ',' \ ',' │ ',' / '];
+	$sym = [' ─ ',' / ',' │ ',' \ ',];
+	//$sym = [' ▂▃▄▅▆▇ ',' ▃▇▄▅▂▆ ',' ▄▂▇▃▅▆ ',' ▂▇▃▆▄▅ '];
+	//$sym =[' ⋯ ',' ⋱ ',' ⋮ ',' ⋰ '];
+	//$sym =[' ⋯ ',' ⋰ ',' ⋮ ',' ⋱ '];
+	$timr = time()+$tmr;
+	$a = 0;
+	while(true){
+		$a +=1;
+		$x = $col[array_rand($col)];
+		$nic = auth($x);
+		
+		$res=$timr-time();
+		if($res < 1) {
+			break;
+		}
+		print "         ".$x.$sym[$a % 4].p.date('H',$res).$x.":".p.date('i',$res).$x.":".p.date('s',$res).$nic[$a % 18]."\r";
+		usleep(100000);
+	}
+	print "\r                                   \r";
+}

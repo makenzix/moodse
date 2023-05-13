@@ -1,0 +1,6 @@
+if(preg_match('/cloudflare/',$r) || preg_match('/Cloudflare/',$r) || preg_match('/Just a moment.../',$r)){
+	print m."Cloudflare detect\n";
+	unlink("Cookie");
+	unlink("cookie.txt");
+	goto cookie;
+}

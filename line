@@ -1,0 +1,3 @@
+function Line(){
+	return p.str_repeat('─',50).n;
+}
